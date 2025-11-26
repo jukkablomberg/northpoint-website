@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>Growth Engine — NorthPoint</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar / Header -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" style="display: flex; align-items: center; gap: 12px; text-decoration: none; color: inherit;">
+                    <div class="nav-compass-wrapper">
+                        <div class="logo-icon">N</div>
+                    </div>
+                    <span class="logo-text">NorthPoint</span>
+                </a>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html#about">About</a></li>
+                <li class="nav-dropdown">
+                    <a href="index.html#services" class="nav-dropdown-toggle">Services</a>
+                    <ul class="nav-dropdown-menu">
+                        <li><a href="cmo-elite.html">
+                            <svg class="nav-service-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>CMO Elite</span>
+                        </a></li>
+                        <li><a href="growth-engine.html" class="nav-service-active">
+                            <svg class="nav-service-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 3V21H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M7 16L12 11L16 15L21 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M21 10V3H14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Growth Engine</span>
+                        </a></li>
+                        <li><a href="product-xray.html">
+                            <svg class="nav-service-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 12S5 4 12 4S23 12 23 12S19 20 12 20S1 12 1 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Product X-Ray</span>
+                        </a></li>
+                        <li><a href="compass.html">
+                            <svg class="nav-service-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12 2V6M12 18V22M2 12H6M18 12H22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12 8L8 12L12 16L16 12L12 8Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Compass</span>
+                        </a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <a href="contact-us.html" class="nav-cta" style="text-decoration: none; display: inline-block;">Get in Touch</a>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-background">
+            <div class="animated-grid"></div>
+            <div class="gradient-overlay"></div>
+        </div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Growth Engine</h1>
+                <h2 class="hero-subtitle">When you need an elite crypto growth machine</h2>
+                <p class="hero-body">Crypto-native growth execution — SEO, KOL scaling, on-chain data, community ignition, and AI-driven precision.</p>
+                <div class="hero-ctas">
+                    <a href="contact-us.html" class="cta-primary" style="text-decoration: none; display: inline-block;">Get in Touch</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="cmo-elite-icon">
+                    <div class="cmo-elite-icon-glow"></div>
+                    <svg width="120" height="120" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 3V21H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M7 16L12 11L16 15L21 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M21 10V3H14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Details Section -->
+    <section class="about" id="about">
+        <div class="about-background-pattern"></div>
+        <div class="container">
+            <div class="about-header">
+                <h2 class="section-title">What is Growth Engine?</h2>
+                <p class="about-intro">Elite crypto growth execution that scales your platform to millions of users.</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="about-card-glow"></div>
+                    <div class="about-card-content">
+                        <div class="about-card-title-wrapper">
+                            <div class="about-card-icon">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <h3 class="about-card-title">SEO & Content</h3>
+                        </div>
+                        <p class="about-card-body">Crypto-native SEO strategies that rank. Content that converts. We understand how crypto users search, discover, and engage with platforms.</p>
+                    </div>
+                </div>
+                <div class="about-card">
+                    <div class="about-card-glow"></div>
+                    <div class="about-card-content">
+                        <div class="about-card-title-wrapper">
+                            <div class="about-card-icon">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <h3 class="about-card-title">KOL Scaling</h3>
+                        </div>
+                        <p class="about-card-body">Strategic partnerships with crypto influencers and thought leaders. We scale your reach through authentic relationships and proven KOL playbooks.</p>
+                    </div>
+                </div>
+                <div class="about-card">
+                    <div class="about-card-glow"></div>
+                    <div class="about-card-content">
+                        <div class="about-card-title-wrapper">
+                            <div class="about-card-icon">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <h3 class="about-card-title">On-Chain Intelligence</h3>
+                        </div>
+                        <p class="about-card-body">Leverage on-chain data to identify opportunities, target high-value users, and optimize your growth strategies with blockchain-native insights.</p>
+                    </div>
+                </div>
+                <div class="about-card">
+                    <div class="about-card-glow"></div>
+                    <div class="about-card-content">
+                        <div class="about-card-title-wrapper">
+                            <div class="about-card-icon">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <h3 class="about-card-title">AI-Driven Precision</h3>
+                        </div>
+                        <p class="about-card-body">Advanced analytics and AI-powered optimization. Every campaign, every channel, every touchpoint optimized for maximum growth and ROI.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA / Contact -->
+    <section class="contact" id="contact">
+        <div class="contact-background"></div>
+        <div class="container">
+            <div class="contact-content">
+                <h2 class="contact-title">Ready to Scale with Growth Engine?</h2>
+                <p class="contact-body">Let's build your crypto growth machine.</p>
+                <a href="contact-us.html" class="cta-primary large" style="text-decoration: none; display: inline-block;">Get in Touch</a>
+                <div class="floating-compass">
+                    <div class="floating-compass-glow-outer"></div>
+                    <div class="floating-compass-glow-inner"></div>
+                    <div class="floating-compass-ring"></div>
+                    <div class="floating-compass-n">N</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <div class="footer-logo">
+                        <div class="logo-icon">N</div>
+                        <span class="logo-text">NorthPoint</span>
+                    </div>
+                    <p class="footer-tagline">Crypto Growth. Engineered.</p>
+                </div>
+                <div class="footer-right">
+                    <div class="footer-links">
+                        <a href="index.html#about">About</a>
+                        <a href="index.html#services">Services</a>
+                        <a href="index.html#contact">Contact</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 NorthPoint. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
