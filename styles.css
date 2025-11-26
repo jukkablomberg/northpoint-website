@@ -1664,7 +1664,7 @@ p {
     }
     
     .nav-cta {
-        display: none;
+        display: none !important;
     }
     
     .mobile-menu-toggle {
