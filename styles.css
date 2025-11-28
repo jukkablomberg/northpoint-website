@@ -944,13 +944,15 @@ p {
 }
 
 /* Active/touch state for mobile devices */
-.about-card:active {
+.about-card:active,
+.about-card.touching {
     transform: translateY(-4px);
     border-color: rgba(0, 255, 198, 0.3);
     box-shadow: 0 15px 45px rgba(0, 255, 198, 0.2);
 }
 
-.about-card:active .about-card-glow {
+.about-card:active .about-card-glow,
+.about-card.touching .about-card-glow {
     opacity: 1;
 }
 
@@ -1032,23 +1034,32 @@ p {
 }
 
 /* Active/touch state for icon on mobile */
-.about-card:active .about-card-icon {
+.about-card:active .about-card-icon,
+.about-card.touching .about-card-icon {
     transform: scale(1.05) rotate(3deg);
     background: linear-gradient(135deg, rgba(0, 255, 198, 0.15), rgba(122, 63, 255, 0.15));
     border-color: var(--gradient-teal);
     box-shadow: 0 6px 20px rgba(0, 255, 198, 0.25);
 }
 
-.about-card:active .about-card-icon svg {
+.about-card:active .about-card-icon svg,
+.about-card.touching .about-card-icon svg {
     transform: scale(1.05);
 }
 
-.about-card:active .about-card-title {
+.about-card:active .about-card-title,
+.about-card.touching .about-card-title {
     color: var(--text-white);
 }
 
-.about-card:active .about-card-body {
+.about-card:active .about-card-body,
+.about-card.touching .about-card-body {
     color: var(--text-medium);
+}
+
+.about-card:active .about-card-icon::before,
+.about-card.touching .about-card-icon::before {
+    left: 100%;
 }
 
 .about-card-title {

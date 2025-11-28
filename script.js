@@ -354,3 +354,49 @@ window.addEventListener('resize', () => {
     }
 });
 
+// ============================================
+// TOUCH FEEDBACK FOR ABOUT CARDS ON MOBILE
+// ============================================
+
+// Add touch feedback for about cards
+function initAboutCardTouchFeedback() {
+    const aboutCardsForTouch = document.querySelectorAll('.about-card');
+    aboutCardsForTouch.forEach(card => {
+        // Add touching class on touchstart
+        card.addEventListener('touchstart', function(e) {
+            this.classList.add('touching');
+        }, { passive: true });
+        
+        // Remove touching class on touchend or touchcancel
+        card.addEventListener('touchend', function(e) {
+            this.classList.remove('touching');
+        }, { passive: true });
+        
+        card.addEventListener('touchcancel', function(e) {
+            this.classList.remove('touching');
+        }, { passive: true });
+        
+        // Also handle mouse events for devices with both touch and mouse
+        card.addEventListener('mousedown', function(e) {
+            if (window.innerWidth <= 768) {
+                this.classList.add('touching');
+            }
+        });
+        
+        card.addEventListener('mouseup', function(e) {
+            this.classList.remove('touching');
+        });
+        
+        card.addEventListener('mouseleave', function(e) {
+            this.classList.remove('touching');
+        });
+    });
+}
+
+// Initialize when DOM is ready
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initAboutCardTouchFeedback);
+} else {
+    initAboutCardTouchFeedback();
+}
+
