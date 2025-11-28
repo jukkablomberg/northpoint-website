@@ -306,6 +306,7 @@ if (navDropdownToggle && navDropdown) {
     navDropdownToggle.addEventListener('click', (e) => {
         if (window.innerWidth <= 768) {
             e.preventDefault();
+            e.stopPropagation();
             navDropdown.classList.toggle('active');
         }
     });
@@ -321,6 +322,7 @@ if (navMenu) {
                 if (link.classList.contains('nav-dropdown-toggle')) {
                     return;
                 }
+                // Don't prevent default for service links - let them navigate
                 // Close menu for all other links
                 mobileMenuToggle.classList.remove('active');
                 navMenu.classList.remove('active');
@@ -328,6 +330,15 @@ if (navMenu) {
                 document.body.style.overflow = '';
                 navDropdown.classList.remove('active');
             }
+        });
+    });
+    
+    // Ensure service links in dropdown are always clickable
+    const serviceLinks = navMenu.querySelectorAll('.nav-dropdown-menu a');
+    serviceLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            // Allow the link to work normally - don't prevent default
+            // The menu will close via the parent event listener above
         });
     });
 }

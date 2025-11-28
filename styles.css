@@ -1225,7 +1225,7 @@ p {
     position: relative;
     width: 120px;
     height: 120px;
-    margin: 40px auto 0;
+    margin: 80px auto 0; /* Increased from 40px to 80px for more space */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1380,8 +1380,48 @@ p {
     margin-top: 8px;
 }
 
+/* Contact Success Message */
+.contact-success-message {
+    max-width: 600px;
+    margin: 60px auto 0;
+    text-align: center;
+    animation: fadeUp 0.5s ease-out;
+}
+
+.success-title {
+    font-size: 42px;
+    font-weight: 700;
+    color: var(--text-white);
+    margin-bottom: 16px;
+    background: linear-gradient(135deg, var(--gradient-teal), var(--gradient-magenta));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.success-text {
+    font-size: 18px;
+    color: var(--text-body);
+    line-height: 1.6;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* Contact Form Mobile Styles */
 @media (max-width: 768px) {
+    .contact {
+        padding-top: 100px; /* More space at top on mobile/tablet */
+    }
+    
     .contact-form {
         max-width: 100%;
         padding: 0 20px;
@@ -1408,6 +1448,19 @@ p {
     .contact-body {
         font-size: 16px;
         margin-bottom: 32px;
+    }
+    
+    .contact-success-message {
+        margin: 40px auto 0;
+        padding: 0 20px;
+    }
+    
+    .success-title {
+        font-size: 32px;
+    }
+    
+    .success-text {
+        font-size: 16px;
     }
 }
 
@@ -1730,6 +1783,11 @@ p {
     .nav-dropdown-toggle {
         width: 100%;
         position: relative;
+        pointer-events: auto;
+    }
+    
+    .nav-dropdown {
+        position: relative;
     }
     
     .nav-dropdown-toggle::after {
@@ -1749,12 +1807,14 @@ p {
         margin-top: 12px;
         margin-left: 24px;
         min-width: auto;
-        display: block;
+        display: block !important;
         list-style: none;
+        pointer-events: auto;
     }
     
     .nav-dropdown-menu li {
         margin-bottom: 4px;
+        pointer-events: auto;
     }
     
     .nav-dropdown-menu a {
@@ -1768,6 +1828,10 @@ p {
         transition: all 0.3s ease;
         border-left: 2px solid transparent;
         padding-left: 12px;
+        pointer-events: auto !important;
+        cursor: pointer;
+        position: relative;
+        z-index: 10;
     }
     
     .nav-service-icon {
@@ -2021,7 +2085,7 @@ p {
     
     /* Contact Section Mobile */
     .contact {
-        padding: 60px 0;
+        padding: 100px 0 60px 0; /* More space at top on mobile */
     }
     
     .contact-content {
@@ -2038,10 +2102,24 @@ p {
         margin-bottom: 30px;
     }
     
+    .contact-success-message {
+        margin: 30px auto 0;
+        padding: 0 20px;
+    }
+    
+    .success-title {
+        font-size: 28px;
+        margin-bottom: 12px;
+    }
+    
+    .success-text {
+        font-size: 15px;
+    }
+    
     .floating-compass {
         width: 100px;
         height: 100px;
-        margin-top: 30px;
+        margin-top: 60px; /* Increased from 30px to 60px for more space */
     }
     
     .floating-compass-n {
@@ -2180,6 +2258,7 @@ p {
     .floating-compass {
         width: 80px;
         height: 80px;
+        margin-top: 50px; /* Added margin-top for more space */
     }
     
     .floating-compass-n {
