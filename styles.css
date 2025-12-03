@@ -1371,6 +1371,27 @@ p {
     margin-bottom: 40px;
 }
 
+.contact-company-info {
+    background: rgba(243, 243, 243, 0.03);
+    border: 1px solid rgba(243, 243, 243, 0.08);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.contact-company-info p {
+    font-size: 15px;
+    color: var(--text-medium);
+    margin: 8px 0;
+    line-height: 1.6;
+}
+
+.contact-company-info p strong {
+    color: var(--text-light);
+    font-weight: 600;
+}
+
 /* Contact Form Styles */
 .contact-form {
     max-width: 600px;
@@ -1498,6 +1519,15 @@ p {
         margin-bottom: 32px;
     }
     
+    .contact-company-info {
+        padding: 20px;
+        margin-bottom: 32px;
+    }
+    
+    .contact-company-info p {
+        font-size: 14px;
+    }
+    
     .contact-success-message {
         margin: 40px auto 0;
         padding: 0 20px;
@@ -1607,6 +1637,19 @@ p {
 .footer-bottom p {
     font-size: 14px;
     color: var(--text-body);
+}
+
+.footer-company-details {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(243, 243, 243, 0.05);
+}
+
+.footer-company-details p {
+    font-size: 13px;
+    color: var(--text-medium);
+    margin: 4px 0;
+    line-height: 1.6;
 }
 
 /* ============================================
@@ -2148,6 +2191,16 @@ p {
     .contact-body {
         font-size: 16px;
         margin-bottom: 30px;
+    }
+    
+    .contact-company-info {
+        padding: 16px;
+        margin-bottom: 30px;
+    }
+    
+    .contact-company-info p {
+        font-size: 13px;
+        margin: 6px 0;
     }
     
     .contact-success-message {
