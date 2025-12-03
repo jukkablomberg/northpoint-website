@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="htmlLang">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
@@ -22,9 +22,9 @@
                 </a>
             </div>
             <ul class="nav-menu" id="navMenu">
-                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#about" data-i18n="navAbout">About</a></li>
                 <li class="nav-dropdown">
-                    <a href="index.html#services" class="nav-dropdown-toggle">Services</a>
+                    <a href="index.html#services" class="nav-dropdown-toggle" data-i18n="navServices">Services</a>
                     <ul class="nav-dropdown-menu">
                         <li><a href="cmo-elite.html" class="nav-service-active">
                             <svg class="nav-service-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -59,9 +59,29 @@
                         </a></li>
                     </ul>
                 </li>
-                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="index.html#contact" data-i18n="navContact">Contact</a></li>
             </ul>
-            <a href="contact-us.html" class="nav-cta" style="text-decoration: none; display: inline-block;">Get in Touch</a>
+            <div class="nav-right">
+                <div class="language-selector">
+                    <button class="language-toggle" id="languageToggle" aria-label="Change language">
+                        <span class="language-flag">🇬🇧</span>
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="language-menu" id="languageMenu">
+                        <button class="language-option" data-lang="en">
+                            <span class="language-flag">🇬🇧</span>
+                            <span>English</span>
+                        </button>
+                        <button class="language-option" data-lang="fi">
+                            <span class="language-flag">🇫🇮</span>
+                            <span>Suomi</span>
+                        </button>
+                    </div>
+                </div>
+                <a href="contact-us.html" class="nav-cta" style="text-decoration: none; display: inline-block;" data-i18n="navGetInTouch">Get in Touch</a>
+            </div>
             <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
                 <span></span>
                 <span></span>
@@ -79,11 +99,11 @@
         </div>
         <div class="hero-container">
             <div class="hero-content">
-                <h1 class="hero-title">CMO Elite</h1>
-                <h2 class="hero-subtitle">When you need exchange-grade leadership</h2>
-                <p class="hero-body">Get a former exchange CMO running your marketing — building teams, leading strategy, and owning growth end-to-end.</p>
+                <h1 class="hero-title" data-i18n="cmoEliteHeroTitle">CMO Elite</h1>
+                <h2 class="hero-subtitle" data-i18n="cmoEliteHeroSubtitle">When you need exchange-grade leadership</h2>
+                <p class="hero-body" data-i18n="cmoEliteHeroBody">Get a former exchange CMO running your marketing — building teams, leading strategy, and owning growth end-to-end.</p>
                 <div class="hero-ctas">
-                    <a href="contact-us.html" class="cta-primary" style="text-decoration: none; display: inline-block;">Get in Touch</a>
+                    <a href="contact-us.html" class="cta-primary" style="text-decoration: none; display: inline-block;" data-i18n="heroCTA1">Get in Touch</a>
                 </div>
             </div>
             <div class="hero-visual">
@@ -104,8 +124,8 @@
         <div class="about-background-pattern"></div>
         <div class="container">
             <div class="about-header">
-                <h2 class="section-title">What is CMO Elite?</h2>
-                <p class="about-intro">CMO Elite is NorthPoint's flagship service — giving you an executive who has run marketing at top exchanges and scaled platforms to millions. We step in as your fractional CMO, owning strategy, growth, hiring, brand, GTM, and performance with full ownership and accountability.</p>
+                <h2 class="section-title" data-i18n="cmoEliteAboutTitle">What is CMO Elite?</h2>
+                <p class="about-intro" data-i18n="cmoEliteAboutIntro">CMO Elite is NorthPoint's flagship service — giving you an executive who has run marketing at top exchanges and scaled platforms to millions. We step in as your fractional CMO, owning strategy, growth, hiring, brand, GTM, and performance with full ownership and accountability.</p>
             </div>
             <div class="about-grid">
                 <div class="about-card">
@@ -181,9 +201,9 @@
         <div class="contact-background"></div>
         <div class="container">
             <div class="contact-content">
-                <h2 class="contact-title">Serious about scaling?</h2>
-                <p class="contact-body">Connect with us and explore whether CMO Elite is the right fit.</p>
-                <a href="contact-us.html" class="cta-primary large" style="text-decoration: none; display: inline-block;">Get in Touch</a>
+                <h2 class="contact-title" data-i18n="cmoEliteContactTitle">Serious about scaling?</h2>
+                <p class="contact-body" data-i18n="cmoEliteContactBody">Connect with us and explore whether CMO Elite is the right fit.</p>
+                <a href="contact-us.html" class="cta-primary large" style="text-decoration: none; display: inline-block;" data-i18n="contactCTA">Get in Touch</a>
                 <div class="floating-compass">
                     <div class="floating-compass-glow-outer"></div>
                     <div class="floating-compass-glow-inner"></div>
@@ -207,14 +227,14 @@
                 </div>
                 <div class="footer-right">
                     <div class="footer-links">
-                        <a href="index.html#about">About</a>
-                        <a href="index.html#services">Services</a>
-                        <a href="index.html#contact">Contact</a>
+                        <a href="index.html#about" data-i18n="navAbout">About</a>
+                        <a href="index.html#services" data-i18n="navServices">Services</a>
+                        <a href="index.html#contact" data-i18n="navContact">Contact</a>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 NorthPoint. All rights reserved.</p>
+                <p data-i18n="footerCopyright">&copy; 2025 NorthPoint. All rights reserved.</p>
                 <div class="footer-company-details">
                     <p>NorthPoint Marketing Solutions Oy</p>
                     <p>Helsinki, Finland</p>
@@ -224,6 +244,7 @@
         </div>
     </footer>
 
+    <script src="translations.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

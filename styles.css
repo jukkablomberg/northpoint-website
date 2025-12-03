@@ -127,6 +127,13 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 20px;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
 }
 
 .nav-logo {
@@ -352,6 +359,12 @@ p {
     opacity: 1;
 }
 
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
 .nav-cta {
     padding: 12px 24px;
     background: linear-gradient(135deg, var(--gradient-teal), var(--gradient-magenta));
@@ -364,6 +377,101 @@ p {
     transition: transform 0.2s ease, box-shadow 0.3s ease;
     text-decoration: none;
     display: inline-block;
+}
+
+/* Language Selector */
+.language-selector {
+    position: relative;
+}
+
+.language-toggle {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 12px;
+    background: rgba(243, 243, 243, 0.05);
+    border: 1px solid rgba(243, 243, 243, 0.1);
+    border-radius: 6px;
+    color: var(--text-body);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.language-flag {
+    font-size: 18px;
+    line-height: 1;
+    display: inline-block;
+}
+
+.language-toggle:hover {
+    background: rgba(243, 243, 243, 0.1);
+    border-color: rgba(243, 243, 243, 0.2);
+    color: var(--text-white);
+}
+
+.language-toggle svg {
+    transition: transform 0.3s ease;
+}
+
+.language-selector.active .language-toggle svg {
+    transform: rotate(180deg);
+}
+
+.language-menu {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    background: rgba(13, 13, 16, 0.98);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(243, 243, 243, 0.1);
+    border-radius: 8px;
+    padding: 8px;
+    min-width: 120px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 1001;
+}
+
+.language-selector.active .language-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.language-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 10px 16px;
+    background: transparent;
+    border: none;
+    color: var(--text-body);
+    font-size: 14px;
+    text-align: left;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.language-option .language-flag {
+    font-size: 18px;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+.language-option:hover {
+    background: rgba(243, 243, 243, 0.05);
+    color: var(--text-white);
+}
+
+.language-option.active {
+    background: rgba(0, 255, 198, 0.1);
+    color: var(--gradient-teal);
 }
 
 .nav-cta:hover {

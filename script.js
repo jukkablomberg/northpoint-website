@@ -400,3 +400,139 @@ if (document.readyState === 'loading') {
     initAboutCardTouchFeedback();
 }
 
+// ============================================
+// LANGUAGE SWITCHER
+// ============================================
+
+let currentLanguage = localStorage.getItem('language') || 'en';
+
+// Initialize language
+function initLanguage() {
+    // Set HTML lang attribute
+    const htmlLang = document.getElementById('htmlLang');
+    if (htmlLang) {
+        htmlLang.setAttribute('lang', currentLanguage);
+    } else {
+        document.documentElement.setAttribute('lang', currentLanguage);
+    }
+    
+    // Update language selector UI
+    updateLanguageSelector();
+    
+    // Apply translations
+    applyTranslations();
+}
+
+// Update language selector UI
+function updateLanguageSelector() {
+    const languageToggle = document.getElementById('languageToggle');
+    const languageFlag = languageToggle?.querySelector('.language-flag');
+    const languageOptions = document.querySelectorAll('.language-option');
+    
+    // Update flag based on current language
+    if (languageFlag) {
+        if (currentLanguage === 'fi') {
+            languageFlag.textContent = '🇫🇮';
+        } else {
+            languageFlag.textContent = '🇬🇧';
+        }
+    }
+    
+    languageOptions.forEach(option => {
+        if (option.dataset.lang === currentLanguage) {
+            option.classList.add('active');
+        } else {
+            option.classList.remove('active');
+        }
+    });
+}
+
+// Apply translations to elements with data-i18n attribute
+function applyTranslations() {
+    if (typeof translations === 'undefined') {
+        console.error('Translations not loaded');
+        return;
+    }
+    
+    const lang = translations[currentLanguage];
+    if (!lang) {
+        console.error(`Language ${currentLanguage} not found`);
+        return;
+    }
+    
+    // Find all elements with data-i18n attribute
+    document.querySelectorAll('[data-i18n]').forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        if (lang[key]) {
+            element.textContent = lang[key];
+        }
+    });
+    
+    // Update HTML lang attribute
+    const htmlLang = document.getElementById('htmlLang');
+    if (htmlLang) {
+        htmlLang.setAttribute('lang', currentLanguage);
+    } else {
+        document.documentElement.setAttribute('lang', currentLanguage);
+    }
+}
+
+// Switch language
+function switchLanguage(lang) {
+    if (lang === currentLanguage) return;
+    
+    currentLanguage = lang;
+    localStorage.setItem('language', lang);
+    
+    updateLanguageSelector();
+    applyTranslations();
+    
+    // Close language menu
+    const languageSelector = document.querySelector('.language-selector');
+    if (languageSelector) {
+        languageSelector.classList.remove('active');
+    }
+}
+
+// Initialize language switcher
+function initLanguageSwitcher() {
+    const languageToggle = document.getElementById('languageToggle');
+    const languageSelector = document.querySelector('.language-selector');
+    const languageOptions = document.querySelectorAll('.language-option');
+    
+    if (languageToggle) {
+        languageToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            languageSelector?.classList.toggle('active');
+        });
+    }
+    
+    languageOptions.forEach(option => {
+        option.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const lang = option.dataset.lang;
+            if (lang) {
+                switchLanguage(lang);
+            }
+        });
+    });
+    
+    // Close language menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (languageSelector && !languageSelector.contains(e.target)) {
+            languageSelector.classList.remove('active');
+        }
+    });
+}
+
+// Initialize on page load
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => {
+        initLanguage();
+        initLanguageSwitcher();
+    });
+} else {
+    initLanguage();
+    initLanguageSwitcher();
+}
+
