@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024" style="display: block;">
+  <!-- Centered N shape -->
+  <g transform="translate(172.7, 114.2) scale(2.6)">
+    <path fill="white" d="
+      M259 0
+      L200 47
+      L179 176
+      L49 48
+      L2 306
+      L60 259
+      L80 150
+      L211 277
+      Z" />
+  </g>
+</svg>

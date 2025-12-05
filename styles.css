@@ -164,14 +164,16 @@ p {
     z-index: 2;
     width: 40px;
     height: 40px;
-    border-radius: 8px;
-    background: linear-gradient(135deg, var(--gradient-teal), var(--gradient-magenta));
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: 700;
-    font-size: 24px;
-    color: var(--text-white);
+}
+
+.logo-svg {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.4));
 }
 
 .logo-text {
@@ -904,9 +906,21 @@ p {
 .compass-n {
     position: relative;
     z-index: 10;
-    font-size: 96px;
-    font-weight: 700;
-    color: var(--text-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 96px;
+    height: 96px;
+    margin: 0 auto;
+}
+
+.compass-n-svg {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+    margin: 0 auto;
     filter: drop-shadow(0 0 20px rgba(0, 255, 198, 0.3));
 }
 
@@ -1461,10 +1475,18 @@ p {
 .floating-compass-n {
     position: relative;
     z-index: 2;
-    font-size: 54px;
-    font-weight: 700;
-    color: var(--text-white);
-    text-shadow: 0 0 15px rgba(0, 255, 198, 0.5), 0 0 30px rgba(122, 63, 255, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 54px;
+    height: 54px;
+}
+
+.floating-compass-n .compass-n-svg {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 0 15px rgba(0, 255, 198, 0.5)) drop-shadow(0 0 30px rgba(122, 63, 255, 0.3));
 }
 
 .contact-title {
@@ -2201,7 +2223,8 @@ p {
     }
     
     .compass-n {
-        font-size: 80px;
+        width: 80px;
+        height: 80px;
     }
     
     .compass-center {
@@ -2332,7 +2355,8 @@ p {
     }
     
     .floating-compass-n {
-        font-size: 44px;
+        width: 44px;
+        height: 44px;
     }
     
     /* Footer Mobile */
@@ -2440,7 +2464,8 @@ p {
     }
     
     .compass-n {
-        font-size: 64px;
+        width: 64px;
+        height: 64px;
     }
     
     .compass-center {
@@ -2471,7 +2496,8 @@ p {
     }
     
     .floating-compass-n {
-        font-size: 36px;
+        width: 36px;
+        height: 36px;
     }
 }
 
